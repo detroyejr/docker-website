@@ -19,4 +19,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 ## Clone website and move the public directory to www/public.
 RUN git clone https://github.com/detroyejr/website /website
-RUN cp /website/public /www/public
+RUN cp -r website/public /www/public
