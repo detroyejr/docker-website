@@ -2,13 +2,13 @@ version: "3"
 services:
   web:
     container_name: website
-    build: nginx/.
+    image: detroyejr/docker-website:website
     ports:
     - "80:80"
     depends_on: 
     - shiny
   shiny:
     container_name: shiny
-    build: shiny/.
+    image: detroyejr/docker-website:website-shiny
     ports:
     - "3838:3838"
